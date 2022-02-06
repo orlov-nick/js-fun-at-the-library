@@ -14,13 +14,32 @@ for (var i = 0; i < shelf.length; i++) {
 }
 }
 
-function listTitles(shelf) {
-  // var titles = 
+// function listTitles(shelf) {
+//   // var titles = 
 
-for (var i = 0; 0 < shelf.length; i++) {
-  return shelf[i].title + ',' + ' ' + shelf[1].title + ',' + ' ' + shelf[2].title
+// for (var i = 0; 0 < shelf.length; i++) {
+//   return shelf[i].title + ',' + ' ' + shelf[1].title + ',' + ' ' + shelf[2].title
   
-}
+// }
+// }
+
+// function listTitles(bookShelf) {
+//   var titles = ''
+//   for (var i = 0; i < bookShelf.length; i++) {
+//     if (i < bookShelf.length - 1) {
+//       titles = titles + `${bookShelf[i].title}, `;
+//     } else {
+//       titles = titles + `${bookShelf[i].title}`;
+//     }
+//   } return titles
+// }
+
+function listTitles(shelf, titles) {
+  var titles = [];
+  for (var i = 0; i < shelf.length; i++) {
+    titles.push(shelf[i].title)
+  }
+  return titles.join(', ')
 }
 
 function searchShelf(shelf, title) {
